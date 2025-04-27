@@ -1,0 +1,30 @@
+<div class="header">
+  <h1>Sensi<span>Tize</span></h1>
+  <div class="header_right">
+    <span>Dr John</span>
+    <button class="contact">Contact Us</button>
+  </div>
+</div>
+<div class="body_container">
+  <nav>
+    <a routerLink="/program">Create Program</a>
+    <a routerLink="/register">Register Client</a>
+    <a routerLink="/enroll">Enroll Client into Program</a>
+    <a routerLink="/search">Search for Client</a>
+    <a routerLink="/view">View Client Profile</a>
+  </nav>
+</div>
+<div class="nav_display">
+  <div class="button_container">
+    <button class="left">Create </button>
+    <button class="right">Your Health Programs</button>
+  </div>
+  <router-outlet class="display"></router-outlet>
+</div>
+<footer>
+  <div class="footer_bar">
+    <p>
+      Copyright &reg; 2025 Sensi<span>Tize</span>. All rights Reserved
+    </p>
+  </div>
+</footer>

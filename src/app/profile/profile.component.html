@@ -1,0 +1,15 @@
+<h2>View Client Profile</h2>
+<select [(ngModel)]="clientId" aria-label="profiles">
+  <option [value]="0">Select Client</option>
+  <option *ngFor="let client of clientService.getAllClients()" [value]="client.id">
+    {{client.name}}
+  </option>
+</select>
+<button (click)="viewProfile()" class="btn_view">View</button>
+<div *ngIf="client">
+  <h3>{{client.name}}</h3>
+  <p>Programs Enrolled:</p>
+  <ul>
+    <li *ngFor="let healthProgram of client.healthprograms">{{healthProgram.name}}</li>
+  </ul>
+</div>

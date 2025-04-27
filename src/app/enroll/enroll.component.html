@@ -1,0 +1,12 @@
+<h2>Enroll client</h2>
+<select [(ngModel)]="chosenClientId" aria-label="options-1">
+  <option [value]="0">Select Client</option>
+  <option *ngFor="let client of clientService.getAllClients()" [value]="client.id">{{client.name}}</option>
+</select>
+<div *ngFor="let healthProgram of clientService.getAllPrograms()">
+  <label>
+    <input type="checkbox" [value]="healthProgram.id"/>
+    {{healthProgram.name}}
+  </label>
+</div>
+<button (click)="enrolClient()">Enroll</button>
